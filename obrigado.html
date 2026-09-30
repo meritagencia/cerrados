@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obrigado | Cerrado Imobiliária</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: var(--c-bg);
+      color: var(--c-text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
+    .obrigado-container {
+      max-width: 600px;
+      padding: 40px 20px;
+    }
+    .obrigado-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(74, 124, 89, 0.1);
+      color: #4A7C59;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .obrigado-icon svg {
+      width: 40px;
+      height: 40px;
+    }
+    .obrigado-title {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .obrigado-body {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .btn-voltar {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--c-primary);
+      color: white;
+      border-radius: var(--r-md);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .btn-voltar:hover {
+      background: #002D47;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="obrigado-container">
+    <div class="obrigado-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6L9 17l-5-5"/>
+      </svg>
+    </div>
+    <h1 class="obrigado-title">Obrigado!</h1>
+    <p class="obrigado-body">
+      Recebemos suas informações com sucesso. Agradecemos pelo seu interesse! Em breve, um especialista do nosso time entrará em contato com você pelo WhatsApp.
+    </p>
+    <a href="index.html" class="btn-voltar">
+      Voltar para a página inicial
+    </a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>0926 – Hero Scroll Animation</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Scoped hero animation variables */
+    :root {
+      --hero-scroll: 0;
+    }
+    .hero {
+      height: 100vh;
+      min-height: 700px;
+      position: relative;
+      overflow: hidden;
+      padding-top: calc(var(--announce-h) + var(--nav-h));
+    }
+    .hero__bg-img {
+      transform: scale(1.1);
+      transition: transform 0.2s linear;
+    }
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 0 24px;
+      max-width: 900px;
+      transform: translateY(calc(var(--hero-scroll) * -80px));
+      opacity: calc(1 - var(--hero-scroll));
+      transition: transform 0.2s linear, opacity 0.2s linear;
+    }
+    .hero__title {
+      font-size: clamp(56px, 10vw, 112px);
+      font-weight: 800;
+      letter-spacing: -3px;
+      line-height: 1;
+    }
+    .hero__title em {
+      color: var(--c-accent-3);
+    }
+    .hero__subtitle {
+      font-size: clamp(17px, 2.5vw, 22px);
+      font-weight: 300;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 40px;
+    }
+    .hero__actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero__scroll-hint {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.6);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      animation: scrollHint 2s ease infinite;
+      z-index: 2;
+    }
+    .hero__scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.5));
+    }
+    @keyframes scrollHint {
+      0%, 100% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
+      50% { opacity: 1; transform: translateX(-50%) translateY(6px); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section with scroll‑linked animation -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-wrap">
+      <img src="hero.jpg" alt="Cerrado property at sunset" class="hero__bg-img" id="hero-bg" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content" id="hero-content">
+      <p class="hero__eyebrow" id="hero-eyebrow">Cerrado Imobiliária</p>
+      <h1 class="hero__title" id="hero-title">Viva com<br/><em>alma.</em></h1>
+      <p class="hero__subtitle" id="hero-subtitle">
+        Empreendimentos de alto padrão integrados à beleza<br/>e à biodiversidade única do Cerrado brasileiro.
+      </p>
+      <div class="hero__actions">
+        <a href="#empreendimentos" class="btn btn--primary">Conhecer Empreendimentos</a>
+        <a href="#visao-geral" class="btn btn--ghost">Ver mais ↓</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint" id="hero-scroll-hint">
+      <div class="hero__scroll-line"></div>
+      <span>Role para descobrir</span>
+    </div>
+  </section>
+
+  <script>
+    // Scroll‑driven hero animation – updates CSS variable --hero-scroll (0 → 1)
+    const heroBg = document.getElementById('hero-bg');
+    const hint = document.getElementById('hero-scroll-hint');
+    const maxScroll = window.innerHeight; // first viewport height
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const progress = Math.min(scrollY / maxScroll, 1);
+      document.documentElement.style.setProperty('--hero-scroll', progress);
+      // subtle parallax on background image
+      heroBg.style.transform = `scale(1.1) translateY(${progress * 40}px)`;
+      // fade out scroll hint after a bit of scroll
+      hint.style.opacity = Math.max(0, 1 - progress * 2);
+    }, { passive: true });
+  </script>
+</body>
+</html>

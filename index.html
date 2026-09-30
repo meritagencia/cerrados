@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="frente.png" fetchpriority="high">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -45,7 +46,7 @@
 
     <section class="hero" id="hero">
       <div class="hero__bg-wrap">
-        <img src="frente.png" alt="Fachada da casa no Cerrado" class="hero__bg-img" id="hero-bg" />
+        <img src="frente.png" alt="Fachada da casa no Cerrado" class="hero__bg-img" id="hero-bg" fetchpriority="high" decoding="sync" />
         <div class="hero__overlay"></div>
       </div>
       <div class="hero__content">
@@ -84,13 +85,13 @@
       <div class="feature-section__media">
         <div class="simple-carousel" id="interior-carousel">
           <div class="simple-carousel__track" id="interior-carousel-track">
-            <img src="frente.png" alt="Fachada Principal" class="simple-carousel__img" />
-            <img src="areagourmet.png" alt="Área Gourmet" class="simple-carousel__img" />
-            <img src="piscina.png" alt="Piscina" class="simple-carousel__img" />
-            <img src="quarto.png" alt="Suíte Master" class="simple-carousel__img" />
-            <img src="banheiro.png" alt="Banheiro" class="simple-carousel__img" />
-            <img src="sacada.png" alt="Sacada" class="simple-carousel__img" />
-            <img src="lateral.png" alt="Fachada Lateral" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="frente.png" alt="Fachada Principal" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="areagourmet.png" alt="Área Gourmet" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="piscina.png" alt="Piscina" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="quarto.png" alt="Suíte Master" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="banheiro.png" alt="Banheiro" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="sacada.png" alt="Sacada" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="lateral.png" alt="Fachada Lateral" class="simple-carousel__img" />
           </div>
           <button class="simple-carousel__btn simple-carousel__btn--prev" aria-label="Anterior">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
@@ -152,15 +153,15 @@
       <div class="feature-section__media">
         <div class="simple-carousel" id="condo-carousel">
           <div class="simple-carousel__track" id="condo-carousel-track">
-            <img src="Imagem-17-3-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
-            <img src="Imagem-24-1-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
-            <img src="Imagem-26-1-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
-            <img src="Imagem-29-1-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
-            <img src="Imagem-31-1-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
-            <img src="Imagem-33-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
-            <img src="Imagem-35-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
-            <img src="Imagem-4-3-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
-            <img src="Imagem-40-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="Imagem-17-3-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="Imagem-24-1-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="Imagem-26-1-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="Imagem-29-1-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="Imagem-31-1-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="Imagem-33-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="Imagem-35-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="Imagem-4-3-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
+            <img loading="lazy" decoding="async" src="Imagem-40-scaled.jpg" alt="Condomínio Villa Toscana" class="simple-carousel__img" />
           </div>
           <button class="simple-carousel__btn simple-carousel__btn--prev" aria-label="Anterior">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
@@ -243,28 +244,28 @@
       <div class="gallery-scroll-wrap">
         <div class="gallery-track" id="gallery-track">
           <div class="gallery-item gallery-item--tall">
-            <img src="frente.png" alt="Fachada da Casa" />
+            <img loading="lazy" decoding="async" src="frente.png" alt="Fachada da Casa" />
             <div class="gallery-item__overlay"><span>Fachada Principal</span></div>
           </div>
 
           <div class="gallery-item gallery-item--tall">
-            <img src="areagourmet.png" alt="Área Gourmet" />
+            <img loading="lazy" decoding="async" src="areagourmet.png" alt="Área Gourmet" />
             <div class="gallery-item__overlay"><span>Área Gourmet</span></div>
           </div>
           <div class="gallery-item">
-            <img src="piscina.png" alt="Piscina privativa" />
+            <img loading="lazy" decoding="async" src="piscina.png" alt="Piscina privativa" />
             <div class="gallery-item__overlay"><span>Piscina Privativa</span></div>
           </div>
           <div class="gallery-item gallery-item--wide">
-            <img src="quarto.png" alt="Suíte master" style="object-position: center 70%;" />
+            <img loading="lazy" decoding="async" src="quarto.png" alt="Suíte master" style="object-position: center 70%;" />
             <div class="gallery-item__overlay"><span>Suíte Master</span></div>
           </div>
           <div class="gallery-item">
-            <img src="banheiro.png" alt="Banheiro" />
+            <img loading="lazy" decoding="async" src="banheiro.png" alt="Banheiro" />
             <div class="gallery-item__overlay"><span>Banheiro</span></div>
           </div>
           <div class="gallery-item gallery-item--tall">
-            <img src="sacada.png" alt="Sacada" />
+            <img loading="lazy" decoding="async" src="sacada.png" alt="Sacada" />
             <div class="gallery-item__overlay"><span>Sacada</span></div>
           </div>
         </div>
@@ -283,21 +284,21 @@
         <div class="team-grid">
           <div class="team-member reveal-up">
             <div class="team-member__img-wrap">
-              <img src="manoel.jpg" alt="Manoel Henrique" class="team-member__img" />
+              <img loading="lazy" decoding="async" src="manoel.jpg" alt="Manoel Henrique" class="team-member__img" />
             </div>
             <h3 class="team-member__name">Manoel Henrique</h3>
             <p class="team-member__role">Corretor Especialista</p>
           </div>
           <div class="team-member reveal-up delay-1">
             <div class="team-member__img-wrap">
-              <img src="victor.webp" alt="Victor Batistella" class="team-member__img" />
+              <img loading="lazy" decoding="async" src="victor.webp" alt="Victor Batistella" class="team-member__img" />
             </div>
             <h3 class="team-member__name">Victor Batistella</h3>
             <p class="team-member__role">Corretor Especialista</p>
           </div>
           <div class="team-member reveal-up delay-2">
             <div class="team-member__img-wrap">
-              <img src="weverton.jpg" alt="Weverton Wurzius" class="team-member__img" />
+              <img loading="lazy" decoding="async" src="weverton.jpg" alt="Weverton Wurzius" class="team-member__img" />
             </div>
             <h3 class="team-member__name">Weverton Wurzius</h3>
             <p class="team-member__role">Corretor Especialista</p>
@@ -316,10 +317,10 @@
         <div class="company-carousel-wrap reveal-up delay-1">
           <div class="simple-carousel" id="company-carousel">
             <div class="simple-carousel__track" id="company-carousel-track">
-              <img src="empresa1.png" alt="Cerrado Imobiliária - Sede" class="simple-carousel__img" />
-              <img src="empresa2.webp" alt="Cerrado Imobiliária - Recepção" class="simple-carousel__img" />
-              <img src="empresa3.webp" alt="Cerrado Imobiliária - Atendimento" class="simple-carousel__img" />
-              <img src="empresa4.webp" alt="Cerrado Imobiliária - Escritório" class="simple-carousel__img" />
+              <img loading="lazy" decoding="async" src="empresa1.png" alt="Cerrado Imobiliária - Sede" class="simple-carousel__img" />
+              <img loading="lazy" decoding="async" src="empresa2.webp" alt="Cerrado Imobiliária - Recepção" class="simple-carousel__img" />
+              <img loading="lazy" decoding="async" src="empresa3.webp" alt="Cerrado Imobiliária - Atendimento" class="simple-carousel__img" />
+              <img loading="lazy" decoding="async" src="empresa4.webp" alt="Cerrado Imobiliária - Escritório" class="simple-carousel__img" />
             </div>
             <button class="simple-carousel__btn simple-carousel__btn--prev" aria-label="Anterior">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
@@ -375,7 +376,7 @@
 
     <section class="cta-section" id="contato">
       <div class="cta-section__bg">
-        <img src="hero.jpg" alt="Empreendimento Cerrado" class="cta-section__bg-img" />
+        <img loading="lazy" decoding="async" src="hero.jpg" alt="Empreendimento Cerrado" class="cta-section__bg-img" />
         <div class="cta-section__overlay"></div>
       </div>
       <div class="container">

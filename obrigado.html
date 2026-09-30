@@ -19,13 +19,26 @@
     }
     .obrigado-container {
       max-width: 600px;
-      padding: 40px 20px;
+      padding: 60px 40px;
+      background: var(--c-bg-alt);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 4px solid var(--c-accent-2);
+      margin: 20px;
+    }
+    .obrigado-logo {
+      height: 48px;
+      margin-bottom: 40px;
+      object-fit: contain;
     }
     .obrigado-icon {
       width: 80px;
       height: 80px;
-      background: rgba(74, 124, 89, 0.1);
-      color: #4A7C59;
+      background: rgba(0, 59, 92, 0.1);
+      color: var(--c-accent);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -37,48 +50,60 @@
       height: 40px;
     }
     .obrigado-title {
-      font-size: 36px;
-      color: white;
+      font-size: 32px;
+      color: var(--c-text);
       margin-bottom: 16px;
       font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .obrigado-title span {
+      color: var(--c-accent-2);
     }
     .obrigado-body {
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 32px;
+      font-size: 16px;
+      color: var(--c-text-sec);
+      margin-bottom: 40px;
       line-height: 1.6;
     }
     .btn-voltar {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      background: var(--c-primary);
+      gap: 12px;
+      padding: 16px 32px;
+      background: var(--c-accent);
       color: white;
       border-radius: var(--r-md);
       text-decoration: none;
       font-weight: 600;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 14px rgba(0, 59, 92, 0.3);
     }
     .btn-voltar:hover {
-      background: #002D47;
+      background: var(--c-accent-2);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(240, 92, 38, 0.4);
     }
   </style>
 </head>
 <body>
 
   <div class="obrigado-container">
+    <img src="logoempresa.png" alt="Cerrado Imobiliária" class="obrigado-logo" />
+    
     <div class="obrigado-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M20 6L9 17l-5-5"/>
       </svg>
     </div>
-    <h1 class="obrigado-title">Obrigado!</h1>
+    
+    <h1 class="obrigado-title">Recebemos seu <span>contato!</span></h1>
     <p class="obrigado-body">
-      Recebemos suas informações com sucesso. Agradecemos pelo seu interesse! Em breve, um especialista do nosso time entrará em contato com você pelo WhatsApp.
+      Agradecemos pelo interesse. Em breve, um de nossos especialistas em imóveis de alto padrão entrará em contato com você pelo WhatsApp.
     </p>
+    
     <a href="index.html" class="btn-voltar">
-      Voltar para a página inicial
+      Voltar para o site
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
 

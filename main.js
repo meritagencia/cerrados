@@ -354,7 +354,7 @@ setupCarousel('company-carousel');
 const modal = document.getElementById('contact-modal');
 const modalOverlay = document.getElementById('modal-overlay');
 const modalClose = document.getElementById('modal-close');
-const openModalBtns = document.querySelectorAll('#open-modal-btn, #hero-cta-primary, #cinematic-cta');
+const openModalBtns = document.querySelectorAll('.open-modal-btn, #open-modal-btn, #hero-cta-primary');
 
 function openModal(e) {
   if (e) e.preventDefault();
